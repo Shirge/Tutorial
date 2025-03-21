@@ -1,16 +1,20 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LaunchCube : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    InputAction interact;
+
+    private void Start()
     {
-        gameObject.GetComponent<Rigidbody>().AddForce(0, 500, 0);
+        interact = InputSystem.actions.FindAction("Interact");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (interact.WasReleasedThisFrame())
+        {
+            gameObject.GetComponent<Rigidbody>().AddForce(0, 5, 0, ForceMode.Impulse);
+        }
     }
 }
