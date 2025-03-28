@@ -26,7 +26,14 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        onFloor = false;
+        if (collision.gameObject.tag == "floor")
+        {
+            return;
+        }
+        else
+        {
+            onFloor = false;
+        }
     }
 
     private void FixedUpdate()

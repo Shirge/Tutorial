@@ -18,3 +18,7 @@ Links to scripts
 ## Tutorial 3
 ![Cube moving and jumping around](Jumping.gif)
 [Link to the script](https://github.com/Shirge/Tutorial/blob/main/Tutorial/Assets/Scripts/Movement.cs)
+
+## Tutorial 4
+![Cube pickup up orbs](Pickup.gif)
+[Link to the script](https://github.com/Shirge/Tutorial/blob/main/Tutorial/Assets/Scripts/GetPickup.cs)
